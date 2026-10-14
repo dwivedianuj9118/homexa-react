@@ -2,841 +2,453 @@
   {
     "host": "vercel",
     "width": 1366,
+    "step": "fresh load /",
     "path": "/",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/",
     "title": "Residential Plots & Gated Townships in Lucknow | Homexa Realty",
     "h1": "Where life finds its perfect place to live",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 3676,
-    "imgs": 14,
-    "brokenImgs": [
-      "https://homexa-react.vercel.app/images/testimonial_rajiv_sharma.png"
-    ],
-    "height": 7299
+    "mainText": 3183,
+    "rootChildren": 4,
+    "scrollY": 0
   },
   {
     "host": "vercel",
     "width": 1366,
-    "path": "/projects",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/projects",
-    "title": "Plot & Gated Township Projects in Lucknow | Homexa Realty",
-    "h1": "Plots & gated townships in Lucknow",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1571,
-    "imgs": 6,
-    "brokenImgs": [],
-    "height": 2883
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/projects/kohinoor-outer-ring-road",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/projects/kohinoor-outer-ring-road",
-    "title": "Kohinoor Plots, Outer Ring Road, Lucknow | Homexa Realty",
-    "h1": "Kohinoor",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1339,
-    "imgs": 4,
-    "brokenImgs": [],
-    "height": 2400
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/projects/vaidehi-enclave-ayodhya-road",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/projects/vaidehi-enclave-ayodhya-road",
-    "title": "Vaidehi Enclave Plots, Near Ayodhya Road, Lucknow | Homexa Realty",
-    "h1": "Vaidehi Enclave",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1341,
-    "imgs": 4,
-    "brokenImgs": [],
-    "height": 2424
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/about",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/about",
-    "title": "Our Story: Trusted Real Estate Advisors in Lucknow | Homexa Realty",
-    "h1": "The architecture of trust",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 3123,
-    "imgs": 3,
-    "brokenImgs": [],
-    "height": 5801
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/insights",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/insights",
-    "title": "Lucknow Real Estate Market Insights & Reports | Homexa Realty",
-    "h1": "Market insights",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1401,
-    "imgs": 3,
-    "brokenImgs": [],
-    "height": 2349
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/insights/why-gated-plots-are-gaining-ground",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/insights/why-gated-plots-are-gaining-ground",
-    "title": "Why Gated Plots Are Gaining Ground | Homexa Realty",
-    "h1": "Why Gated Plots Are Gaining Ground",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1404,
-    "imgs": 1,
-    "brokenImgs": [],
-    "height": 2366
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/career",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/career",
-    "title": "Careers in Real Estate in Lucknow | Homexa Realty",
-    "h1": "Build your legacy",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 2655,
-    "imgs": 1,
-    "brokenImgs": [],
-    "height": 3654
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/contact",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/contact",
-    "title": "Contact Us & Book a Site Visit in Lucknow | Homexa Realty",
-    "h1": "Let’s find your right property",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1434,
-    "imgs": 1,
-    "brokenImgs": [],
-    "height": 2008
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/privacy-policy",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/privacy-policy",
-    "title": "Privacy Policy | Homexa Realty",
-    "h1": "Privacy Policy",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1504,
-    "imgs": 0,
-    "brokenImgs": [],
-    "height": 1293
-  },
-  {
-    "host": "vercel",
-    "width": 1366,
-    "path": "/rera-compliance",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/rera-compliance",
-    "title": "RERA Compliance | Homexa Realty",
-    "h1": "RERA Compliance",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1803,
-    "imgs": 0,
-    "brokenImgs": [],
-    "height": 1518
-  },
-  {
-    "host": "vercel",
-    "width": 390,
+    "step": "click /",
     "path": "/",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/",
     "title": "Residential Plots & Gated Townships in Lucknow | Homexa Realty",
     "h1": "Where life finds its perfect place to live",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 3625,
-    "imgs": 14,
-    "brokenImgs": [
-      "https://homexa-react.vercel.app/images/testimonial_rajiv_sharma.png"
-    ],
-    "height": 10819
+    "mainText": 3183,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
-    "width": 390,
+    "width": 1366,
+    "step": "back from /",
+    "path": "blank",
+    "title": "",
+    "h1": null,
+    "mainText": 0,
+    "rootChildren": -1,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /projects",
     "path": "/projects",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/projects",
     "title": "Plot & Gated Township Projects in Lucknow | Homexa Realty",
     "h1": "Plots & gated townships in Lucknow",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1520,
-    "imgs": 6,
-    "brokenImgs": [],
-    "height": 4627
+    "mainText": 1079,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
-    "width": 390,
-    "path": "/projects/kohinoor-outer-ring-road",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/projects/kohinoor-outer-ring-road",
-    "title": "Kohinoor Plots, Outer Ring Road, Lucknow | Homexa Realty",
-    "h1": "Kohinoor",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1288,
-    "imgs": 4,
-    "brokenImgs": [],
-    "height": 4144
-  },
-  {
-    "host": "vercel",
-    "width": 390,
-    "path": "/projects/vaidehi-enclave-ayodhya-road",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/projects/vaidehi-enclave-ayodhya-road",
-    "title": "Vaidehi Enclave Plots, Near Ayodhya Road, Lucknow | Homexa Realty",
-    "h1": "Vaidehi Enclave",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1290,
-    "imgs": 4,
-    "brokenImgs": [],
-    "height": 4114
-  },
-  {
-    "host": "vercel",
-    "width": 390,
+    "width": 1366,
+    "step": "click /about",
     "path": "/about",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/about",
     "title": "Our Story: Trusted Real Estate Advisors in Lucknow | Homexa Realty",
     "h1": "The architecture of trust",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 3072,
-    "imgs": 3,
-    "brokenImgs": [],
-    "height": 7912
+    "mainText": 2631,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
-    "width": 390,
+    "width": 1366,
+    "step": "click /insights",
     "path": "/insights",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/insights",
     "title": "Lucknow Real Estate Market Insights & Reports | Homexa Realty",
     "h1": "Market insights",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1350,
-    "imgs": 3,
-    "brokenImgs": [],
-    "height": 3303
+    "mainText": 909,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
-    "width": 390,
-    "path": "/insights/why-gated-plots-are-gaining-ground",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/insights/why-gated-plots-are-gaining-ground",
-    "title": "Why Gated Plots Are Gaining Ground | Homexa Realty",
-    "h1": "Why Gated Plots Are Gaining Ground",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1353,
-    "imgs": 1,
-    "brokenImgs": [],
-    "height": 2693
-  },
-  {
-    "host": "vercel",
-    "width": 390,
+    "width": 1366,
+    "step": "click /career",
     "path": "/career",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/career",
     "title": "Careers in Real Estate in Lucknow | Homexa Realty",
     "h1": "Build your legacy",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 2604,
-    "imgs": 1,
-    "brokenImgs": [],
-    "height": 4994
+    "mainText": 2162,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
-    "width": 390,
+    "width": 1366,
+    "step": "click /contact",
     "path": "/contact",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/contact",
     "title": "Contact Us & Book a Site Visit in Lucknow | Homexa Realty",
     "h1": "Let’s find your right property",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1383,
-    "imgs": 1,
-    "brokenImgs": [],
-    "height": 3590
+    "mainText": 941,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
-    "width": 390,
+    "width": 1366,
+    "step": "click /projects/green-country-sultanpur-road",
+    "path": "/projects/green-country-sultanpur-road",
+    "title": "Green Country Plots, Sultanpur Road, Lucknow | Homexa Realty",
+    "h1": "Green Country",
+    "mainText": 886,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /projects/kohinoor-outer-ring-road",
+    "path": "/projects/kohinoor-outer-ring-road",
+    "title": "Kohinoor Plots, Outer Ring Road, Lucknow | Homexa Realty",
+    "h1": "Kohinoor",
+    "mainText": 847,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /projects/vaidehi-enclave-ayodhya-road",
+    "path": "/projects/vaidehi-enclave-ayodhya-road",
+    "title": "Vaidehi Enclave Plots, Near Ayodhya Road, Lucknow | Homexa Realty",
+    "h1": "Vaidehi Enclave",
+    "mainText": 849,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /projects/exotica-green-nagram",
+    "path": "/projects/exotica-green-nagram",
+    "title": "Exotica Green Plots, Nagram, Lucknow | Homexa Realty",
+    "h1": "Exotica Green",
+    "mainText": 858,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /insights/why-lucknow-is-emerging-as-a-key-real-estate-market",
+    "path": "/insights/why-lucknow-is-emerging-as-a-key-real-estate-market",
+    "title": "Why Lucknow Is Emerging as a Key Real Estate Market | Homexa Realty",
+    "h1": "Why Lucknow Is Emerging as a Key Real Estate Market",
+    "mainText": 1260,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /insights/why-gated-plots-are-gaining-ground",
+    "path": "/insights/why-gated-plots-are-gaining-ground",
+    "title": "Why Gated Plots Are Gaining Ground | Homexa Realty",
+    "h1": "Why Gated Plots Are Gaining Ground",
+    "mainText": 912,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /privacy-policy",
     "path": "/privacy-policy",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/privacy-policy",
     "title": "Privacy Policy | Homexa Realty",
     "h1": "Privacy Policy",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1453,
-    "imgs": 0,
-    "brokenImgs": [],
-    "height": 2106
+    "mainText": 1011,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /terms-conditions",
+    "path": "/terms-conditions",
+    "title": "Terms & Conditions | Homexa Realty",
+    "h1": "Terms & Conditions",
+    "mainText": 1451,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /payment-policy",
+    "path": "/payment-policy",
+    "title": "Payment Policy | Homexa Realty",
+    "h1": "Payment Policy",
+    "mainText": 1278,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 1366,
+    "step": "click /rera-compliance",
+    "path": "/rera-compliance",
+    "title": "RERA Compliance | Homexa Realty",
+    "h1": "RERA Compliance",
+    "mainText": 1310,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "vercel",
     "width": 390,
+    "step": "fresh load /",
+    "path": "/",
+    "title": "Residential Plots & Gated Townships in Lucknow | Homexa Realty",
+    "h1": "Where life finds its perfect place to live",
+    "mainText": 3183,
+    "rootChildren": 4,
+    "scrollY": 0
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /",
+    "path": "/",
+    "title": "Residential Plots & Gated Townships in Lucknow | Homexa Realty",
+    "h1": "Where life finds its perfect place to live",
+    "mainText": 3183,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "back from /",
+    "path": "blank",
+    "title": "",
+    "h1": null,
+    "mainText": 0,
+    "rootChildren": -1,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /projects",
+    "path": "/projects",
+    "title": "Plot & Gated Township Projects in Lucknow | Homexa Realty",
+    "h1": "Plots & gated townships in Lucknow",
+    "mainText": 1079,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /about",
+    "path": "/about",
+    "title": "Our Story: Trusted Real Estate Advisors in Lucknow | Homexa Realty",
+    "h1": "The architecture of trust",
+    "mainText": 2631,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /insights",
+    "path": "/insights",
+    "title": "Lucknow Real Estate Market Insights & Reports | Homexa Realty",
+    "h1": "Market insights",
+    "mainText": 909,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /career",
+    "path": "/career",
+    "title": "Careers in Real Estate in Lucknow | Homexa Realty",
+    "h1": "Build your legacy",
+    "mainText": 2162,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /contact",
+    "path": "/contact",
+    "title": "Contact Us & Book a Site Visit in Lucknow | Homexa Realty",
+    "h1": "Let’s find your right property",
+    "mainText": 941,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /projects/green-country-sultanpur-road",
+    "path": "/projects/green-country-sultanpur-road",
+    "title": "Green Country Plots, Sultanpur Road, Lucknow | Homexa Realty",
+    "h1": "Green Country",
+    "mainText": 886,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /projects/kohinoor-outer-ring-road",
+    "path": "/projects/kohinoor-outer-ring-road",
+    "title": "Kohinoor Plots, Outer Ring Road, Lucknow | Homexa Realty",
+    "h1": "Kohinoor",
+    "mainText": 847,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /projects/vaidehi-enclave-ayodhya-road",
+    "path": "/projects/vaidehi-enclave-ayodhya-road",
+    "title": "Vaidehi Enclave Plots, Near Ayodhya Road, Lucknow | Homexa Realty",
+    "h1": "Vaidehi Enclave",
+    "mainText": 849,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /projects/exotica-green-nagram",
+    "path": "/projects/exotica-green-nagram",
+    "title": "Exotica Green Plots, Nagram, Lucknow | Homexa Realty",
+    "h1": "Exotica Green",
+    "mainText": 858,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /insights/why-lucknow-is-emerging-as-a-key-real-estate-market",
+    "path": "/insights/why-lucknow-is-emerging-as-a-key-real-estate-market",
+    "title": "Why Lucknow Is Emerging as a Key Real Estate Market | Homexa Realty",
+    "h1": "Why Lucknow Is Emerging as a Key Real Estate Market",
+    "mainText": 1260,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /insights/why-gated-plots-are-gaining-ground",
+    "path": "/insights/why-gated-plots-are-gaining-ground",
+    "title": "Why Gated Plots Are Gaining Ground | Homexa Realty",
+    "h1": "Why Gated Plots Are Gaining Ground",
+    "mainText": 912,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /privacy-policy",
+    "path": "/privacy-policy",
+    "title": "Privacy Policy | Homexa Realty",
+    "h1": "Privacy Policy",
+    "mainText": 1011,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /terms-conditions",
+    "path": "/terms-conditions",
+    "title": "Terms & Conditions | Homexa Realty",
+    "h1": "Terms & Conditions",
+    "mainText": 1451,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /payment-policy",
+    "path": "/payment-policy",
+    "title": "Payment Policy | Homexa Realty",
+    "h1": "Payment Policy",
+    "mainText": 1278,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
+  },
+  {
+    "host": "vercel",
+    "width": 390,
+    "step": "click /rera-compliance",
     "path": "/rera-compliance",
-    "console": [],
-    "failed": [],
-    "status": 200,
-    "finalUrl": "https://homexa-react.vercel.app/rera-compliance",
     "title": "RERA Compliance | Homexa Realty",
     "h1": "RERA Compliance",
-    "cssLoaded": "Manrope, system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
-    "bodyBg": "rgb(247, 244, 238)",
-    "textLen": 1752,
-    "imgs": 0,
-    "brokenImgs": [],
-    "height": 2359
+    "mainText": 1310,
+    "rootChildren": 4,
+    "scrollY": 0,
+    "errors": []
   },
   {
     "host": "pages",
     "width": 1366,
-    "path": "/",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/src/main.jsx",
-      "https://dwivedianuj9118.github.io/src/main.jsx net::ERR_ABORTED"
-    ],
-    "status": 200,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/",
+    "step": "fresh load /",
+    "path": "/homexa-react/",
     "title": "",
-    "cssLoaded": "\"Times New Roman\"",
-    "bodyBg": "rgba(0, 0, 0, 0)",
-    "textLen": 0,
-    "imgs": 0,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/projects",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/projects"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/projects",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/projects/kohinoor-outer-ring-road",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/projects/kohinoor-outer-ring-road"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/projects/kohinoor-outer-ring-road",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/projects/vaidehi-enclave-ayodhya-road",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/projects/vaidehi-enclave-ayodhya-road"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/projects/vaidehi-enclave-ayodhya-road",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/about",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/about"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/about",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/insights",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/insights"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/insights",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/insights/why-gated-plots-are-gaining-ground",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/insights/why-gated-plots-are-gaining-ground"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/insights/why-gated-plots-are-gaining-ground",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/career",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/career"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/career",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/contact",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/contact"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/contact",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/privacy-policy",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/privacy-policy"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/privacy-policy",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 1366,
-    "path": "/rera-compliance",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/rera-compliance"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/rera-compliance",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
+    "h1": null,
+    "mainText": 0,
+    "rootChildren": 0,
+    "scrollY": 0
   },
   {
     "host": "pages",
     "width": 390,
-    "path": "/",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/src/main.jsx",
-      "https://dwivedianuj9118.github.io/src/main.jsx net::ERR_ABORTED"
-    ],
-    "status": 200,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/",
+    "step": "fresh load /",
+    "path": "/homexa-react/",
     "title": "",
-    "cssLoaded": "\"Times New Roman\"",
-    "bodyBg": "rgba(0, 0, 0, 0)",
-    "textLen": 0,
-    "imgs": 0,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/projects",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/projects"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/projects",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/projects/kohinoor-outer-ring-road",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/projects/kohinoor-outer-ring-road"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/projects/kohinoor-outer-ring-road",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/projects/vaidehi-enclave-ayodhya-road",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/projects/vaidehi-enclave-ayodhya-road"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/projects/vaidehi-enclave-ayodhya-road",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/about",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/about"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/about",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/insights",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/insights"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/insights",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/insights/why-gated-plots-are-gaining-ground",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/insights/why-gated-plots-are-gaining-ground"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/insights/why-gated-plots-are-gaining-ground",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/career",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/career"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/career",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/contact",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/contact"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/contact",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/privacy-policy",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/privacy-policy"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/privacy-policy",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
-  },
-  {
-    "host": "pages",
-    "width": 390,
-    "path": "/rera-compliance",
-    "console": [
-      "Failed to load resource: the server responded with a status of 404 ()"
-    ],
-    "failed": [
-      "404 https://dwivedianuj9118.github.io/homexa-react/rera-compliance"
-    ],
-    "status": 404,
-    "finalUrl": "https://dwivedianuj9118.github.io/homexa-react/rera-compliance",
-    "title": "Page not found · GitHub Pages",
-    "h1": "404",
-    "cssLoaded": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
-    "bodyBg": "rgb(241, 241, 241)",
-    "textLen": 383,
-    "imgs": 2,
-    "brokenImgs": [],
-    "height": 900
+    "h1": null,
+    "mainText": 0,
+    "rootChildren": 0,
+    "scrollY": 0
   }
 ]
