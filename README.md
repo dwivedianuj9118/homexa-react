@@ -33,7 +33,7 @@ Adding a project or article to the data files automatically creates its page, ad
 - Confirm the phone number and the `homexrealty.com` email / CRM domain (the site itself is `homexarealty.com`).
 - Add RERA numbers, real social URLs and lawyer-reviewed policy text.
 - Project detail copy, highlights, the article bodies and the full testimonial were written for this rebuild where the live site had none; review them.
-- Images load from the live site by default. Run `npm run fetch-images`, then set `VITE_IMAGE_BASE=/images` in `.env` to self-host.
+- Images: the GitHub Pages build copies them from homexarealty.com and serves its own copies. Locally they load from the live site; run `npm run fetch-images` and set `VITE_IMAGE_BASE=/images` in `.env` to self-host.
 - Set `VITE_FORM_ENDPOINT` to receive enquiries; without it the form opens WhatsApp with the enquiry pre-filled.
 
 ## Deploy to GitHub Pages

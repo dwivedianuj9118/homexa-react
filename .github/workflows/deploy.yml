@@ -24,6 +24,15 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      # Copy images from homexarealty.com so the site serves its own copies.
+      # If any download fails, the build keeps loading images from the live site.
+      - name: Self-host images
+        run: |
+          if npm run fetch-images; then
+            echo "VITE_IMAGE_BASE=${BASE_PATH}images" >> "$GITHUB_ENV"
+          fi
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
       # Serve from https://<user>.github.io/<repo>/. Remove BASE_PATH when using a custom domain.
       - run: npm run build
         env:

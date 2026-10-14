@@ -16,9 +16,17 @@ const files = [
 ];
 
 fs.mkdirSync(out, { recursive: true });
+let failed = 0;
 for (const f of files) {
-  const res = await fetch(`https://www.homexarealty.com/images/${f}`);
-  if (!res.ok) { console.warn(`skip ${f}: ${res.status}`); continue; }
-  fs.writeFileSync(path.join(out, f), Buffer.from(await res.arrayBuffer()));
-  console.log(`saved ${f}`);
+  try {
+    const res = await fetch(`https://www.homexarealty.com/images/${f}`);
+    if (!res.ok) throw new Error(String(res.status));
+    fs.writeFileSync(path.join(out, f), Buffer.from(await res.arrayBuffer()));
+    console.log(`saved ${f}`);
+  } catch (err) {
+    failed++;
+    console.warn(`failed ${f}: ${err.message}`);
+  }
 }
+// Non-zero exit tells CI to keep loading images from the live site instead.
+if (failed) process.exit(1);

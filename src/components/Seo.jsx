@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { site, img } from '../data/site.js';
+import { site, absImg as img } from '../data/site.js';
 import { absUrl } from '../seo/schema.js';
 
 /**

@@ -1,4 +1,4 @@
-import { SITE_URL, site, img } from '../data/site.js';
+import { SITE_URL, site, absImg as img } from '../data/site.js';
 import { formatPrice } from '../data/projects.js';
 
 export const absUrl = (path = '/') => `${SITE_URL}${path === '/' ? '/' : path.replace(/\/$/, '')}`;

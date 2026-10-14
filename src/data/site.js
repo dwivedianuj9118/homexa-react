@@ -6,6 +6,8 @@ export const SITE_URL = 'https://www.homexarealty.com';
 // and set VITE_IMAGE_BASE=/images in .env to self-host them.
 const IMAGE_BASE = (import.meta.env.VITE_IMAGE_BASE || `${SITE_URL}/images`).replace(/\/$/, '');
 export const img = (file) => `${IMAGE_BASE}/${file}`;
+// Social previews and structured data need absolute URLs on the canonical domain.
+export const absImg = (file) => `${SITE_URL}/images/${file}`;
 
 export const site = {
   name: 'Homexa Realty',
