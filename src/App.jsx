@@ -12,6 +12,7 @@ import Career from './pages/Career.jsx';
 import Contact from './pages/Contact.jsx';
 import Policy from './pages/Policy.jsx';
 import NotFound from './pages/NotFound.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 import { policies } from './data/policies.js';
 
 function ScrollToTop() {
@@ -21,26 +22,29 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
   return (
     <>
       <ScrollToTop />
       <a href="#main" className="skip-link">Skip to content</a>
       <Header />
       <main id="main" tabIndex={-1}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/insights/:slug" element={<InsightDetail />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/contact" element={<Contact />} />
-          {Object.keys(policies).map((slug) => (
-            <Route key={slug} path={`/${slug}`} element={<Policy slug={slug} />} />
-          ))}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <ErrorBoundary key={pathname}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="/career" element={<Career />} />
+            <Route path="/contact" element={<Contact />} />
+            {Object.keys(policies).map((slug) => (
+              <Route key={slug} path={`/${slug}`} element={<Policy slug={slug} />} />
+            ))}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </ErrorBoundary>
       </main>
       <Footer />
     </>
