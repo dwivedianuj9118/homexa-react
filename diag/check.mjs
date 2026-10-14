@@ -20,6 +20,9 @@ for (const [name, base] of Object.entries(hosts)) {
         const res = await p.goto(base + path, { waitUntil: 'networkidle', timeout: 45000 });
         r.status = res.status();
         r.finalUrl = p.url();
+        // Scroll through the page so lazy-loaded images load, like a real visitor.
+        await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 120)); } window.scrollTo(0, 0); });
+        await p.waitForLoadState('networkidle');
         Object.assign(r, await p.evaluate(() => ({
           title: document.title,
           h1: document.querySelector('h1')?.textContent,
@@ -27,7 +30,7 @@ for (const [name, base] of Object.entries(hosts)) {
           bodyBg: getComputedStyle(document.body).backgroundColor,
           textLen: document.body.innerText.length,
           imgs: document.images.length,
-          brokenImgs: [...document.images].filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.src),
+          brokenImgs: [...document.images].filter((i) => !i.complete || i.naturalWidth === 0).map((i) => i.src),
           height: document.documentElement.scrollHeight,
         })));
         if (w === 1366 || path === '/') await p.screenshot({ path: `diag/out/${name}-${w}${path.replace(/\//g, '_') || '_'}.png`, fullPage: true });
