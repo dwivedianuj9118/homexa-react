@@ -36,6 +36,9 @@ Adding a project or article to the data files automatically creates its page, ad
 - Images: the GitHub Pages build copies them from homexarealty.com and serves its own copies. Locally they load from the live site; run `npm run fetch-images` and set `VITE_IMAGE_BASE=/images` in `.env` to self-host.
 - Set `VITE_FORM_ENDPOINT` to receive enquiries; without it the form opens WhatsApp with the enquiry pre-filled.
 
+## Deploy to Vercel
+Import the repo at https://vercel.com/new and click **Deploy**; `vercel.json` sets the build command and output folder, so no settings need changing. The Vercel build copies images from homexarealty.com (falling back to the live URLs if that fails), and every push to `main` redeploys.
+
 ## Deploy to GitHub Pages
 Pushing to `main` runs `.github/workflows/deploy.yml`, which builds with `BASE_PATH=/<repo-name>/` and publishes to
 `https://<user>.github.io/<repo-name>/`. In the repo, set **Settings → Pages → Source** to **GitHub Actions** once.
