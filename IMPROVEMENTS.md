@@ -146,6 +146,6 @@ These are copied from the live site but look wrong, so they're marked `TODO` in 
 2. **Email and Login use `homexrealty.com`** (no "a") while the site is `homexarealty.com`.
 3. **RERA registration numbers** aren't shown anywhere. Add them to the RERA page and project pages.
 4. **Social media URLs**, so the icons can be shown.
-5. **Text I wrote where the live site had none:** project descriptions and highlights, article bodies, policy pages and the full testimonial. Please review them, and have the policies checked legally.
+5. **Text I wrote where the live site had none:** project descriptions and highlights, article bodies and the full testimonial. Policy pages now use the live site's own text. Please review them, and have the policies checked legally.
 6. **Images** still load from homexarealty.com. Run `npm run fetch-images` and set `VITE_IMAGE_BASE=/images` to self-host them.
 7. **Design:** I couldn't access the live site's CSS, so colours and fonts are a close match rather than an exact copy.
