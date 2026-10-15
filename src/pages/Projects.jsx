@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import PageHero from '../components/PageHero.jsx';
 import Breadcrumbs from '../components/Breadcrumbs.jsx';
@@ -12,8 +13,19 @@ const crumbs = [{ to: '/', label: 'Home' }, { to: '/projects', label: 'Projects'
 const tags = ['All', ...new Set(projects.map((p) => p.tag))];
 
 export default function Projects() {
+  const [params] = useSearchParams();
   const [tag, setTag] = useState('All');
-  const list = tag === 'All' ? projects : projects.filter((p) => p.tag === tag);
+  const [max, setMax] = useState(0);
+
+  // Apply filters from the home page search (?type=&max=) after hydration, so the
+  // pre-rendered HTML (which has no query string) still matches the first render.
+  useEffect(() => {
+    const t = params.get('type');
+    setTag(t && tags.includes(t) ? t : 'All');
+    setMax(Number(params.get('max')) || 0);
+  }, [params]);
+
+  const list = projects.filter((p) => (tag === 'All' || p.tag === tag) && (!max || p.price <= max));
 
   return (
     <>
@@ -24,6 +36,7 @@ export default function Projects() {
         jsonLd={[breadcrumbSchema(crumbs), projectListSchema(projects)]}
       />
       <PageHero
+        variant="split"
         eyebrow="All Projects"
         title="Plots & gated townships"
         accent="in Lucknow"
@@ -42,7 +55,14 @@ export default function Projects() {
             </button>
           ))}
         </div>
+        {max > 0 && (
+          <p className="filter-note">
+            Showing projects up to ₹{max.toLocaleString('en-IN')}/sq ft.{' '}
+            <button type="button" className="link-button" onClick={() => setMax(0)}>Clear budget</button>
+          </p>
+        )}
         <p className="sr-only" aria-live="polite">{list.length} projects shown</p>
+        {list.length === 0 && <p className="note">No projects match this search yet. Try another type or budget, or contact us for upcoming launches.</p>}
         <div className="grid-3 project-grid">
           {list.map((p) => <ProjectCard key={p.slug} project={p} />)}
         </div>

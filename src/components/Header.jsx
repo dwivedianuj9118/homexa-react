@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { mainNav, site } from '../data/site.js';
+import { ClockIcon, MailIcon, PhoneIcon } from './Icons.jsx';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -11,6 +12,15 @@ export default function Header() {
 
   return (
     <header className="site-header">
+      <div className="topbar">
+        <div className="container topbar-inner">
+          <span className="topbar-hide-sm"><ClockIcon width={14} height={14} /> {site.hours[0].days}, {site.hours[0].time}</span>
+          <span>
+            <a href={`tel:${site.phoneHref}`}><PhoneIcon width={14} height={14} /> {site.phone}</a>
+            <span className="topbar-hide-sm"> &nbsp;·&nbsp; <a href={`mailto:${site.email}`}><MailIcon width={14} height={14} /> {site.email}</a></span>
+          </span>
+        </div>
+      </div>
       <div className="container header-inner">
         <Link to="/" className="logo" aria-label={`${site.name} home`}>
           HOMEXA <span>REALTY</span>

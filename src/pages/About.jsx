@@ -50,6 +50,7 @@ export default function About() {
         jsonLd={[breadcrumbSchema(crumbs)]}
       />
       <PageHero
+        variant="centered"
         eyebrow="Our Story"
         title="The architecture"
         accent="of trust"
@@ -74,7 +75,7 @@ export default function About() {
         </div>
       </Section>
 
-      <Section id="philosophy" eyebrow="Our Pillars" title="The philosophy" accent="of curation" dark>
+      <Section id="philosophy" eyebrow="Our Pillars" title="The philosophy" accent="of curation" className="section-tint">
         <ul className="grid-3 pillars">
           {pillars.map((p) => <li key={p.title} className="pillar"><h3>{p.title}</h3><p>{p.text}</p></li>)}
         </ul>
@@ -119,7 +120,7 @@ export default function About() {
         </div>
       </Section>
 
-      <Section id="concierge" eyebrow="The Experience" title="The signature" accent="concierge">
+      <Section id="concierge" eyebrow="The Experience" title="The signature" accent="concierge" className="section-sand">
         <div className="split">
           <ul className="grid-2 pillars">
             {concierge.map((c) => <li key={c.title} className="pillar"><h3>{c.title}</h3><p>{c.text}</p></li>)}

@@ -50,8 +50,11 @@ export default function Footer() {
           <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
         </address>
       </div>
-      <div className="container footer-bottom">
-        <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+      <div className="footer-bottom">
+        <div className="container footer-bottom-inner">
+          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <p>Verified plots &amp; gated townships in Lucknow</p>
+        </div>
       </div>
     </footer>
   );

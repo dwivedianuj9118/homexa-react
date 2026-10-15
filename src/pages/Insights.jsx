@@ -21,6 +21,7 @@ export default function Insights() {
         jsonLd={[breadcrumbSchema(crumbs)]}
       />
       <PageHero
+        variant="editorial"
         eyebrow="Market Intelligence"
         title="Market"
         accent="insights"
@@ -31,7 +32,7 @@ export default function Insights() {
         <Breadcrumbs items={crumbs} />
       </PageHero>
 
-      <Section id="latest" eyebrow="Latest Articles" title="The" accent="insight">
+      <Section id="latest" eyebrow="Latest Articles" title="The" accent="insight" className="section-tint">
         {lead.stat && (
           <p className="stat-callout"><strong>{lead.stat.value}</strong> {lead.stat.label}</p>
         )}

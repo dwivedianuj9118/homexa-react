@@ -27,6 +27,7 @@ export default function Career() {
         jsonLd={[breadcrumbSchema(crumbs), ...jobs.map(jobSchema)]}
       />
       <PageHero
+        variant="brand"
         eyebrow="Join Homexa"
         title="Build your"
         accent="legacy"
@@ -42,6 +43,7 @@ export default function Career() {
         eyebrow="Our Culture"
         title="A culture of"
         accent="excellence"
+        className="section-white"
         intro="We hold ourselves to a global standard, reject aggressive sales tactics and give our people deep data, strong collateral and a collaborative workspace."
       >
         <ul className="grid-4 pillars">

@@ -13,6 +13,7 @@ import Contact from './pages/Contact.jsx';
 import Policy from './pages/Policy.jsx';
 import NotFound from './pages/NotFound.jsx';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
+import FloatingContact from './components/FloatingContact.jsx';
 import { policies } from './data/policies.js';
 
 function ScrollToTop() {
@@ -47,6 +48,7 @@ export default function App() {
         </ErrorBoundary>
       </main>
       <Footer />
+      <FloatingContact />
     </>
   );
 }

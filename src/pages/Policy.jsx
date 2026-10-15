@@ -24,7 +24,7 @@ export default function Policy({ slug }) {
   return (
     <>
       <Seo title={policy.title} description={policy.description} path={path} jsonLd={[breadcrumbSchema(crumbs)]} />
-      <article className="detail">
+      <article className="detail policy">
         <div className="container narrow prose">
           <Breadcrumbs items={crumbs} />
           <p className="eyebrow">Corporate</p>

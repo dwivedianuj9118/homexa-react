@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import HeroSlider from '../components/HeroSlider.jsx';
+import QuickSearch from '../components/QuickSearch.jsx';
 import Seo from '../components/Seo.jsx';
 import Section from '../components/Section.jsx';
 import Img from '../components/Img.jsx';
@@ -9,6 +11,40 @@ import { ArrowIcon } from '../components/Icons.jsx';
 import { featuredProjects } from '../data/projects.js';
 import { insights } from '../data/insights.js';
 import { organizationSchema, websiteSchema } from '../seo/schema.js';
+
+const slides = [
+  {
+    image: 'hero_garden_widescreen_left.png',
+    alt: 'Family playing together in a landscaped society garden at sunset',
+    eyebrow: 'Plots & gated townships in Lucknow',
+    title: 'Where life finds its',
+    accent: 'perfect place',
+    after: 'to live',
+    text: 'Thoughtfully planned plots and gated townships in Lucknow, chosen for families who want a secure community and a sound investment.',
+    to: '/projects',
+    cta: 'Explore Lucknow Projects',
+  },
+  {
+    image: 'gated_society_entrance_clean.png',
+    alt: 'Secure gated entrance of a residential township in Lucknow',
+    eyebrow: 'Gated townships',
+    title: 'Secure communities,',
+    accent: 'planned for families',
+    text: 'Boundary walls, controlled entry, internal roads and green spaces in every township we recommend.',
+    to: '/projects?type=Gated%20Township',
+    cta: 'View Gated Townships',
+  },
+  {
+    image: 'lucknow_ayodhya_plots_dusk.png',
+    alt: 'Residential plots near Ayodhya Road, Lucknow at dusk',
+    eyebrow: 'Invest in Lucknow’s growth corridors',
+    title: 'Plots from',
+    accent: '₹650 / sq ft',
+    text: 'Verified plots on Sultanpur Road, Ayodhya Road, Outer Ring Road and the Purvanchal Expressway with clear titles.',
+    to: '/projects',
+    cta: 'See Prices & Locations',
+  },
+];
 
 const pillars = [
   { title: 'Trust & Transparency', text: 'Every plot is backed by verified documents and honest, upfront pricing.' },
@@ -47,29 +83,18 @@ export default function Home() {
         jsonLd={[organizationSchema(), websiteSchema()]}
       />
 
-      <section className="hero" aria-labelledby="hero-title">
-        <Img file="hero_garden_widescreen_left.png" alt="Family playing together in a landscaped society garden at sunset" width={1920} height={1080} priority className="hero-bg" />
-        <div className="container hero-content">
-          <p className="eyebrow">Plots &amp; gated townships in Lucknow</p>
-          <h1 id="hero-title" className="display hero-title">
-            Where life finds its <em>perfect place</em> to live
-          </h1>
-          <p className="lead">
-            Thoughtfully planned plots and gated townships in Lucknow, chosen for families who want a secure community and a sound investment.
-          </p>
-          <div className="hero-actions">
-            <Link to="/projects" className="btn btn-gold">Explore Lucknow Projects <ArrowIcon /></Link>
-            <Link to="/contact" className="btn btn-outline">Book a Site Visit</Link>
-          </div>
-          <ul className="hero-faces" aria-label="Families who chose Homexa">
-            <li><Img file="family1.png" alt="Young couple with their daughter outside their new home" width={96} height={96} /></li>
-            <li><Img file="family2.png" alt="Parents and two children smiling in a garden" width={96} height={96} /></li>
-            <li><Img file="family3.png" alt="Grandparents with their grandchildren in a gated community park" width={96} height={96} /></li>
-          </ul>
-        </div>
-      </section>
+      <HeroSlider slides={slides} />
+      <QuickSearch />
+      <div className="container trust-strip">
+        <ul className="hero-faces" aria-hidden="true">
+          <li><Img file="family1.png" alt="" width={96} height={96} /></li>
+          <li><Img file="family2.png" alt="" width={96} height={96} /></li>
+          <li><Img file="family3.png" alt="" width={96} height={96} /></li>
+        </ul>
+        <p><strong>Trusted by families across Lucknow</strong> · 500+ selected plots · 100% clear titles · 12+ years of local expertise</p>
+      </div>
 
-      <Section id="trust" eyebrow="Why Homexa Realty" title="Built around" accent="trust & value">
+      <Section id="trust" eyebrow="Why Homexa Realty" title="Built around" accent="trust & value" className="section-white">
         <ul className="grid-4 pillars">
           {pillars.map((p) => (
             <li key={p.title} className="pillar">
@@ -95,7 +120,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <Section id="legacy" eyebrow="Our Legacy" title="Building the foundation for" accent="better living" dark>
+      <Section id="legacy" eyebrow="Our Legacy" title="Building the foundation for" accent="better living" className="section-tint">
         <dl className="stats">
           {stats.map((s) => (
             <div key={s.label}>
@@ -106,7 +131,7 @@ export default function Home() {
         </dl>
       </Section>
 
-      <Section id="services" eyebrow="What we offer" title="Curated" accent="living">
+      <Section id="services" eyebrow="What we offer" title="Curated" accent="living" className="section-sand">
         <div className="split">
           <ol className="numbered">
             {services.map((s, i) => (
@@ -142,14 +167,14 @@ export default function Home() {
         </ol>
       </Section>
 
-      <Section id="insights" eyebrow="Market Intelligence" title="The" accent="insight">
+      <Section id="insights" eyebrow="Market Intelligence" title="The" accent="insight" className="section-white">
         <div className="grid-2">
           {insights.map((a) => <InsightCard key={a.slug} article={a} />)}
         </div>
         <p className="center"><Link to="/insights" className="text-link">Read all market insights <ArrowIcon /></Link></p>
       </Section>
 
-      <Section id="testimonial" eyebrow="Client Stories" title="The Homexa" accent="experience">
+      <Section id="testimonial" eyebrow="Client Stories" title="The Homexa" accent="experience" className="section-tint">
         <figure className="testimonial">
           <Img file="testimonial_rajiv_sharma.png" alt="Rajiv Sharma, NRI investor and Homexa Realty client" width={160} height={160} />
           <blockquote>

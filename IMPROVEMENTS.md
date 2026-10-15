@@ -149,3 +149,16 @@ These are copied from the live site but look wrong, so they're marked `TODO` in 
 5. **Text I wrote where the live site had none:** project descriptions and highlights, article bodies and the full testimonial. Policy pages now use the live site's own text. Please review them, and have the policies checked legally.
 6. **Images** are copied from homexarealty.com during the GitHub Pages build and served from the site itself. Social share images still point to homexarealty.com, the official domain.
 7. **Design:** I couldn't access the live site's CSS, so colours and fonts are a close match rather than an exact copy.
+
+---
+
+## 8. Design refresh from client feedback (15 Oct 2026)
+
+| Feedback | What changed |
+|---|---|
+| Too much black in the theme | Black backgrounds replaced with a deep teal-green brand colour, used for only a couple of bands. Most sections are now white, soft sage or warm sand. |
+| Home page needs a slider banner | 3-slide banner with auto-play, arrows and dots. It pauses on hover and is off for reduced-motion users. Only slide 1 has the H1, so SEO is unchanged. |
+| Header and banner look the same | White header with a gold underline and shadow, plus a slim teal top bar with hours, phone and email. |
+| Internal pages look similar | Each section has its own banner style: Projects split with a framed photo, Story centred over a photo, Insights editorial with a wide image, Career brand colour with an arched photo, Contact photo overlay, and policies a light sand band. |
+| Footer too dark | Light sand footer with a teal top border and a separate bottom bar. |
+| Ideas from other real estate sites | A property search bar under the banner (type and budget filter the Projects page), a trust strip, and floating WhatsApp and call buttons. |

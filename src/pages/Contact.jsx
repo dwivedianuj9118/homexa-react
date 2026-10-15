@@ -90,6 +90,7 @@ export default function Contact() {
         jsonLd={[breadcrumbSchema(crumbs), organizationSchema()]}
       />
       <PageHero
+        variant="overlay"
         eyebrow="Get in touch"
         title="Let’s find your"
         accent="right property"
