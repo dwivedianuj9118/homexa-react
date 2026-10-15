@@ -14,7 +14,7 @@ export function render(url) {
   const html = renderToString(
     <StrictMode>
       <HelmetProvider context={helmetContext}>
-        <StaticRouter basename={basename || '/'} location={basename + url}>
+        <StaticRouter basename={basename || '/'} location={basename + url} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <App />
         </StaticRouter>
       </HelmetProvider>

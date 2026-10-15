@@ -18,7 +18,10 @@ import { policies } from './data/policies.js';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => window.scrollTo(0, 0), [pathname]);
+  // Block body: newer browsers return a Promise from scrollTo, which React would treat as a cleanup function.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return null;
 }
 

@@ -8,7 +8,9 @@ export default function Header() {
   const { pathname } = useLocation();
 
   // Close the mobile menu after navigating.
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const navLink = ({ isActive }) =>
     `relative py-1 text-[14px] font-medium transition-colors hover:text-brand after:absolute after:inset-x-0 after:-bottom-0.5 after:h-0.5 after:origin-left after:bg-gold after:transition-transform ${
