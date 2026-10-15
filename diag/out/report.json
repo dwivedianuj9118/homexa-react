@@ -1,4 +1,26 @@
 {
  "deployed": true,
- "errors": []
+ "version": "130.0.6723.31",
+ "runs": {
+  "normal": {
+   "pages": [
+    "Projects /projects Plots & gated townships in Lucknow",
+    "Story /about The architecture of trust",
+    "Insights /insights Market insights",
+    "Career /career Build your legacy",
+    "Contact /contact Let’s find your right property"
+   ],
+   "logs": []
+  },
+  "promiseScrollTo": {
+   "pages": [
+    "Projects /projects Plots & gated townships in Lucknow",
+    "Story /about The architecture of trust",
+    "Insights /insights Market insights",
+    "Career /career Build your legacy",
+    "Contact /contact Let’s find your right property"
+   ],
+   "logs": []
+  }
+ }
 }
