@@ -1,40 +1,25 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
-const hosts = { vercel: 'https://homexa-react.vercel.app', pages: 'https://dwivedianuj9118.github.io/homexa-react' };
+const base = 'https://homexa-react.vercel.app';
 fs.rmSync('diag/out', { recursive: true, force: true });
 fs.mkdirSync('diag/out', { recursive: true });
+// Wait for Vercel to finish deploying the new design (the slider marks it).
+for (let i = 0; i < 40; i++) {
+  const html = await (await fetch(base + '/')).text();
+  if (html.includes('hero-slider')) break;
+  await new Promise((r) => setTimeout(r, 15000));
+}
 const b = await chromium.launch();
 const report = [];
-const state = (p) => p.evaluate(() => ({ path: location.pathname, title: document.title, h1: document.querySelector('h1')?.textContent || null, mainText: document.querySelector('main')?.innerText.length || 0, rootChildren: document.getElementById('root')?.children.length ?? -1, scrollY: scrollY }));
-for (const [name, base] of Object.entries(hosts)) {
-  for (const w of [1366, 390]) {
-    const ctx = await b.newContext({ viewport: { width: w, height: 900 } });
-    const p = await ctx.newPage();
-    const errors = [];
-    p.on('pageerror', (e) => errors.push('PAGEERROR ' + e.message.slice(0, 300)));
-    p.on('console', (m) => m.type() === 'error' && errors.push('CONSOLE ' + m.text().slice(0, 300)));
-    await p.goto(base + '/', { waitUntil: 'networkidle' });
-    const fresh = await state(p);
-    report.push({ host: name, width: w, step: 'fresh load /', ...fresh });
-    const hrefs = await p.$$eval('#root a[href]', (as) => [...new Set(as.map((a) => a.getAttribute('href')).filter((h) => h.startsWith('/')))]);
-    for (const h of hrefs) {
-      await p.goto(base + '/', { waitUntil: 'networkidle' });
-      errors.length = 0;
-      const link = p.locator(`#root a[href="${h}"]`).first();
-      if (w === 390 && !(await link.isVisible())) { await p.click('.menu-toggle').catch(() => {}); }
-      try {
-        await link.click({ timeout: 5000 });
-        await p.waitForTimeout(800);
-        const s = await state(p);
-        report.push({ host: name, width: w, step: 'click ' + h, ...s, errors: [...errors] });
-        if (!s.h1 || s.mainText < 50) await p.screenshot({ path: `diag/out/${name}-${w}-click${h.replace(/\//g, '_')}.png` });
-        // browser back should restore the previous page too
-        await p.goBack(); await p.waitForTimeout(500);
-        const back = await state(p);
-        if (!back.h1) report.push({ host: name, width: w, step: 'back from ' + h, ...back, errors: [...errors] });
-      } catch (e) { report.push({ host: name, width: w, step: 'click ' + h, error: e.message.slice(0, 200), errors: [...errors] }); }
-    }
-    await ctx.close();
+for (const w of [1366, 390]) {
+  const p = await b.newPage({ viewport: { width: w, height: 900 } });
+  const errs = []; p.on('pageerror', (e) => errs.push(e.message.slice(0, 200)));
+  for (const path of ['/', '/projects', '/about', '/insights', '/career', '/contact', '/privacy-policy']) {
+    await p.goto(base + path, { waitUntil: 'networkidle' });
+    await p.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 500) { scrollTo(0, y); await new Promise((r) => setTimeout(r, 150)); } scrollTo(0, 0); });
+    await p.waitForLoadState('networkidle'); await p.waitForTimeout(600);
+    report.push({ w, path, slider: await p.locator('.hero-slider').count(), h1: await p.locator('h1').count(), broken: await p.evaluate(() => [...document.images].filter((i) => !i.complete || !i.naturalWidth).length), errs: [...errs] });
+    await p.screenshot({ path: `diag/out/${w}${path.replace(/\//g, '_') || '_'}.png`, fullPage: w === 1366 || path === '/' });
   }
 }
 await b.close();
