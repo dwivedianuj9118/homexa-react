@@ -28,11 +28,11 @@ export default class ErrorBoundary extends Component {
   render() {
     if (!this.state.failed) return this.props.children;
     return (
-      <section className="section notfound">
-        <div className="container narrow center">
-          <h1 className="display">Something went wrong</h1>
-          <p className="lead">Please reload the page.</p>
-          <p><a className="btn btn-gold" href={typeof window !== 'undefined' ? window.location.href : '/'}>Reload</a></p>
+      <section className="py-20">
+        <div className="container max-w-xl text-center">
+          <h1 className="heading">Something went wrong</h1>
+          <p className="lead mx-auto mt-3">Please reload the page.</p>
+          <p className="mt-6"><a className="btn-gold" href={typeof window !== 'undefined' ? window.location.href : '/'}>Reload</a></p>
         </div>
       </section>
     );

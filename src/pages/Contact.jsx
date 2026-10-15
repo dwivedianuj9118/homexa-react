@@ -27,12 +27,12 @@ function validate(v) {
 
 function Field({ id, label, required, error, children }) {
   return (
-    <div className={`field${error ? ' has-error' : ''}`}>
-      <label htmlFor={id}>
-        {label} {required && <span aria-hidden="true" className="req">*</span>}
+    <div className="mb-4">
+      <label htmlFor={id} className="mb-1.5 block text-[13px] font-semibold text-ink">
+        {label} {required && <span aria-hidden="true" className="text-red-700">*</span>}
       </label>
       {children}
-      {error && <p className="error" id={`${id}-error`} role="alert">{error}</p>}
+      {error && <p className="mt-1 text-[13px] text-red-700" id={`${id}-error`} role="alert">{error}</p>}
     </div>
   );
 }
@@ -101,60 +101,60 @@ export default function Contact() {
         <Breadcrumbs items={crumbs} />
       </PageHero>
 
-      <section className="section" aria-label="Contact details and enquiry form">
-        <div className="container contact-grid">
-          <div className="contact-info">
-            <h2 className="h3">Contact information</h2>
-            <address>
-              <dl className="info-list">
+      <section className="bg-white py-12 md:py-16" aria-label="Contact details and enquiry form">
+        <div className="container grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
+          <div>
+            <h2 className="text-2xl">Contact information</h2>
+            <address className="not-italic">
+              <dl className="mt-5 grid gap-4 [&_a]:text-brand [&_a:hover]:underline [&_dd]:mt-0.5 [&_dd]:pl-6 [&_dt]:flex [&_dt]:items-center [&_dt]:gap-2 [&_dt]:text-[12px] [&_dt]:font-bold [&_dt]:uppercase [&_dt]:tracking-[0.12em] [&_dt]:text-gold-dark [&_dd]:text-ink [&_svg]:h-4 [&_svg]:w-4">
                 <div><dt><PinIcon /> Corporate office</dt><dd>{address.street}, {address.locality} {address.postalCode}</dd></div>
                 <div><dt><PhoneIcon /> Phone</dt><dd><a href={`tel:${site.phoneHref}`}>{site.phone}</a></dd></div>
                 <div><dt><MailIcon /> Email</dt><dd><a href={`mailto:${site.email}`}>{site.email}</a></dd></div>
                 <div><dt><ClockIcon /> Working hours</dt><dd>{site.hours.map((h) => <span key={h.days} className="block">{h.days}: {h.time}</span>)}</dd></div>
               </dl>
             </address>
-            <a href={site.whatsapp} className="btn btn-outline" target="_blank" rel="noopener">Chat on WhatsApp</a>
+            <a href={site.whatsapp} className="btn-outline mt-6 text-brand" target="_blank" rel="noopener">Chat on WhatsApp</a>
             <iframe
               title="Map showing Homexa Realty office at Levana Cyber Heights, Gomti Nagar, Lucknow"
-              className="map"
+              className="mt-6 h-64 w-full rounded-2xl border-0 shadow-card"
               src={`https://www.google.com/maps?q=${mapQuery}&z=15&output=embed`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
 
-          <div className="form-card">
-            <h2 className="h3">Tell us what you’re looking for</h2>
-            <p>Share your requirements and our team will help you explore the right property options in Lucknow. Fields marked <span className="req">*</span> are required.</p>
+          <div className="rounded-2xl border border-ink/10 bg-paper p-6 shadow-card md:p-8">
+            <h2 className="text-2xl">Tell us what you’re looking for</h2>
+            <p className="mb-5 mt-1.5 text-[14px]">Share your requirements and our team will help you explore the right property options in Lucknow. Fields marked <span className="text-red-700">*</span> are required.</p>
             <form onSubmit={onSubmit} noValidate>
-              <div className="form-row">
-                <Field id="firstName" label="First name" required error={errors.firstName}><input type="text" autoComplete="given-name" {...bind('firstName', true)} /></Field>
-                <Field id="lastName" label="Last name"><input type="text" autoComplete="family-name" {...bind('lastName')} /></Field>
+              <div className="grid sm:grid-cols-2 sm:gap-4">
+                <Field id="firstName" label="First name" required error={errors.firstName}><input className="field-input" type="text" autoComplete="given-name" {...bind('firstName', true)} /></Field>
+                <Field id="lastName" label="Last name"><input className="field-input" type="text" autoComplete="family-name" {...bind('lastName')} /></Field>
               </div>
-              <div className="form-row">
-                <Field id="email" label="Email address" required error={errors.email}><input type="email" autoComplete="email" {...bind('email', true)} /></Field>
-                <Field id="phone" label="Phone number" required error={errors.phone}><input type="tel" autoComplete="tel" inputMode="tel" {...bind('phone', true)} /></Field>
+              <div className="grid sm:grid-cols-2 sm:gap-4">
+                <Field id="email" label="Email address" required error={errors.email}><input className="field-input" type="email" autoComplete="email" {...bind('email', true)} /></Field>
+                <Field id="phone" label="Phone number" required error={errors.phone}><input className="field-input" type="tel" autoComplete="tel" inputMode="tel" {...bind('phone', true)} /></Field>
               </div>
-              <div className="form-row">
+              <div className="grid sm:grid-cols-2 sm:gap-4">
                 <Field id="interest" label="Interested in" required error={errors.interest}>
-                  <select {...bind('interest', true)}>
+                  <select className="field-input" {...bind('interest', true)}>
                     <option value="">Select an option</option>
                     {interests.map((o) => <option key={o}>{o}</option>)}
                   </select>
                 </Field>
                 <Field id="budget" label="Budget range">
-                  <select {...bind('budget')}>
+                  <select className="field-input" {...bind('budget')}>
                     <option value="">Select a budget</option>
                     {budgets.map((o) => <option key={o}>{o}</option>)}
                   </select>
                 </Field>
               </div>
-              <Field id="location" label="Preferred location"><input type="text" placeholder="e.g. Sultanpur Road" {...bind('location')} /></Field>
-              <Field id="message" label="Message"><textarea rows={4} {...bind('message')} /></Field>
-              <button type="submit" className="btn btn-gold" disabled={status === 'sending'}>
+              <Field id="location" label="Preferred location"><input className="field-input" type="text" placeholder="e.g. Sultanpur Road" {...bind('location')} /></Field>
+              <Field id="message" label="Message"><textarea className="field-input" rows={4} {...bind('message')} /></Field>
+              <button type="submit" className="btn-gold mt-1 disabled:opacity-60" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Sending…' : 'Send Enquiry'}
               </button>
-              <p className="form-status" role="status" aria-live="polite">
+              <p className="mt-3 text-[14px] font-semibold text-brand" role="status" aria-live="polite">
                 {status === 'sent' && 'Thank you. Our team will contact you shortly.'}
                 {status === 'error' && 'Something went wrong. Please call or WhatsApp us instead.'}
               </p>

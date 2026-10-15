@@ -43,27 +43,27 @@ export default function Career() {
         eyebrow="Our Culture"
         title="A culture of"
         accent="excellence"
-        className="section-white"
+        tone="white"
         intro="We hold ourselves to a global standard, reject aggressive sales tactics and give our people deep data, strong collateral and a collaborative workspace."
       >
-        <ul className="grid-4 pillars">
-          {culture.map((c) => <li key={c.title} className="pillar"><h3>{c.title}</h3><p>{c.text}</p></li>)}
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {culture.map((c) => <li key={c.title} className="rounded-2xl border border-ink/10 border-t-2 border-t-gold bg-paper p-6"><h3>{c.title}</h3><p className="mt-1.5 text-[14px]">{c.text}</p></li>)}
         </ul>
       </Section>
 
-      <Section id="openings" eyebrow="We’re hiring" title="Current" accent="openings" dark>
-        <div className="jobs">
+      <Section id="openings" eyebrow="We’re hiring" title="Current" accent="openings" tone="brand">
+        <div className="grid gap-5 lg:grid-cols-3">
           {jobs.map((j) => (
-            <article key={j.slug} className="job" id={j.slug}>
-              <p className="eyebrow">{j.category}</p>
-              <h3>{j.title}</h3>
-              <p className="meta">{j.location} · {j.workplace} · {j.type}</p>
-              <p>{j.description}</p>
-              <h4>Key requirements</h4>
-              <ul className="bullets">
+            <article key={j.slug} className="flex flex-col rounded-2xl bg-white p-6 text-ink-soft shadow-lift" id={j.slug}>
+              <p className="eyebrow !text-gold-dark">{j.category}</p>
+              <h3 className="!text-ink">{j.title}</h3>
+              <p className="mt-1 text-[13px] font-semibold text-ink-muted">{j.location} · {j.workplace} · {j.type}</p>
+              <p className="mt-3 text-[14px]">{j.description}</p>
+              <h4 className="mt-4 text-base">Key requirements</h4>
+              <ul className="mb-5 mt-2 grid list-disc gap-1 pl-5 text-[14px] marker:text-gold">
                 {j.requirements.map((r) => <li key={r}>{r}</li>)}
               </ul>
-              <a className="btn btn-outline" href={`mailto:${site.email}?subject=${encodeURIComponent(`Application: ${j.title}`)}`}>
+              <a className="btn-brand mt-auto self-start" href={`mailto:${site.email}?subject=${encodeURIComponent(`Application: ${j.title}`)}`}>
                 Apply for {j.title}
               </a>
             </article>
@@ -72,10 +72,10 @@ export default function Career() {
       </Section>
 
       <Section id="profile" eyebrow="Open application" title="Submit your" accent="profile">
-        <div className="prose">
-          <p>Don’t see the right role? Send your CV and a short cover letter and we’ll reach out when a suitable position opens.</p>
-          <p>
-            <a className="btn btn-gold" href={`mailto:${site.email}?subject=${encodeURIComponent('General application')}`}>Email your CV</a>{' '}
+        <div className="max-w-2xl">
+          <p className="lead">Don’t see the right role? Send your CV and a short cover letter and we’ll reach out when a suitable position opens.</p>
+          <p className="mt-5 flex flex-wrap items-center gap-4">
+            <a className="btn-gold" href={`mailto:${site.email}?subject=${encodeURIComponent('General application')}`}>Email your CV</a>
             <Link to="/contact" className="text-link">or contact our office</Link>
           </p>
         </div>

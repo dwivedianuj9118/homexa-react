@@ -48,25 +48,25 @@ export default function Projects() {
       </PageHero>
 
       <Section id="projects" eyebrow="Featured Projects" title="Find your" accent="place">
-        <div className="filters" role="group" aria-label="Filter projects by type">
+        <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Filter projects by type">
           {tags.map((t) => (
-            <button key={t} type="button" className="chip" aria-pressed={tag === t} onClick={() => setTag(t)}>
+            <button key={t} type="button" className={`rounded-full border px-4 py-1.5 text-[13px] font-medium transition ${tag === t ? 'border-brand bg-brand text-white' : 'border-ink/15 bg-white hover:border-brand hover:text-brand'}`} aria-pressed={tag === t} onClick={() => setTag(t)}>
               {t}
             </button>
           ))}
         </div>
         {max > 0 && (
-          <p className="filter-note">
+          <p className="mb-4 text-[14px] text-ink-muted">
             Showing projects up to ₹{max.toLocaleString('en-IN')}/sq ft.{' '}
-            <button type="button" className="link-button" onClick={() => setMax(0)}>Clear budget</button>
+            <button type="button" className="font-semibold text-brand underline" onClick={() => setMax(0)}>Clear budget</button>
           </p>
         )}
         <p className="sr-only" aria-live="polite">{list.length} projects shown</p>
-        {list.length === 0 && <p className="note">No projects match this search yet. Try another type or budget, or contact us for upcoming launches.</p>}
-        <div className="grid-3 project-grid">
+        {list.length === 0 && <p className="mb-6 text-[14px] text-ink-muted">No projects match this search yet. Try another type or budget, or contact us for upcoming launches.</p>}
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((p) => <ProjectCard key={p.slug} project={p} />)}
         </div>
-        <p className="note">Prices are starting rates per sq ft and may vary by plot size and location within the project. Contact us for the latest price list.</p>
+        <p className="mt-6 text-[13px] text-ink-muted">Prices are starting rates per sq ft and may vary by plot size and location within the project. Contact us for the latest price list.</p>
       </Section>
 
       <CtaBanner text="Explore plots and gated developments in Lucknow with trusted guidance and a free site visit." />

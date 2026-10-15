@@ -27,7 +27,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
-      <a href="#main" className="skip-link">Skip to content</a>
+      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
       <Header />
       <main id="main" tabIndex={-1}>
         <ErrorBoundary key={pathname}>

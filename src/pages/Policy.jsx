@@ -24,16 +24,16 @@ export default function Policy({ slug }) {
   return (
     <>
       <Seo title={policy.title} description={policy.description} path={path} jsonLd={[breadcrumbSchema(crumbs)]} />
-      <article className="detail policy">
-        <div className="container narrow prose">
-          <Breadcrumbs items={crumbs} />
+      <article className="bg-white py-10 md:py-14">
+        <div className="container max-w-3xl prose-body [&_a]:text-brand [&_a]:underline">
+          <Breadcrumbs items={crumbs} className="text-ink-muted" />
           <p className="eyebrow">Corporate</p>
-          <h1 className="display">{policy.title}</h1>
-          <p className="meta">Last updated <time dateTime={policy.updated}>{formatDate(policy.updated)}</time></p>
-          <p className="lead">{policy.description}</p>
+          <h1 className="text-[2rem] md:text-5xl">{policy.title}</h1>
+          <p className="!mb-2 mt-2 !text-[13px] text-ink-muted">Last updated <time dateTime={policy.updated}>{formatDate(policy.updated)}</time></p>
+          <p className="lead !mb-6 border-b border-ink/10 pb-6">{policy.description}</p>
           {policy.sections.map(([h, p], i) => (
             <section key={h} aria-labelledby={`${slug}-${i}`}>
-              <h2 id={`${slug}-${i}`} className="h3">{i + 1}. {h}</h2>
+              <h2 id={`${slug}-${i}`} className="!mt-6 !text-xl">{i + 1}. {h}</h2>
               <p><Linkify text={p} /></p>
             </section>
           ))}

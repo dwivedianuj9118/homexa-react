@@ -85,104 +85,106 @@ export default function Home() {
 
       <HeroSlider slides={slides} />
       <QuickSearch />
-      <div className="container trust-strip">
-        <ul className="hero-faces" aria-hidden="true">
-          <li><Img file="family1.png" alt="" width={96} height={96} /></li>
-          <li><Img file="family2.png" alt="" width={96} height={96} /></li>
-          <li><Img file="family3.png" alt="" width={96} height={96} /></li>
+      <div className="container flex flex-col items-center justify-center gap-3 py-6 text-center text-[14px] text-ink-muted sm:flex-row">
+        <ul className="flex -space-x-3" aria-hidden="true">
+          {['family1.png', 'family2.png', 'family3.png'].map((f) => (
+            <li key={f}><Img file={f} alt="" width={80} height={80} className="h-10 w-10 rounded-full border-2 border-white object-cover shadow" /></li>
+          ))}
         </ul>
-        <p><strong>Trusted by families across Lucknow</strong> · 500+ selected plots · 100% clear titles · 12+ years of local expertise</p>
+        <p><strong className="text-brand">Trusted by families across Lucknow</strong> · 500+ selected plots · 100% clear titles · 12+ years of local expertise</p>
       </div>
 
-      <Section id="trust" eyebrow="Why Homexa Realty" title="Built around" accent="trust & value" className="section-white">
-        <ul className="grid-4 pillars">
-          {pillars.map((p) => (
-            <li key={p.title} className="pillar">
-              <h3>{p.title}</h3>
-              <p>{p.text}</p>
+      <Section id="trust" eyebrow="Why Homexa Realty" title="Built around" accent="trust & value" tone="white">
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {pillars.map((p, i) => (
+            <li key={p.title} className="group rounded-2xl border border-ink/10 bg-paper p-6 transition hover:border-gold hover:bg-white hover:shadow-card">
+              <span className="font-serif text-2xl font-semibold text-gold" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <h3 className="mt-2 text-xl">{p.title}</h3>
+              <p className="mt-1.5 text-[14px]">{p.text}</p>
             </li>
           ))}
         </ul>
       </Section>
 
-      <section className="gallery container" aria-label="Life in our gated townships">
-        <figure>
-          <Img file="gated_society_entrance_clean.png" alt="Secure gated entrance of a residential society in Lucknow" width={900} height={1100} />
-          <figcaption>Gated Townships</figcaption>
-        </figure>
-        <figure>
-          <Img file="family_playing_society_garden.png" alt="Family enjoying the central garden of a gated community in Lucknow" width={900} height={1100} />
-          <figcaption>Community Life</figcaption>
-        </figure>
-        <figure className="gallery-note">
-          <figcaption>Safe &amp; Secure</figcaption>
-          <p>Boundary walls, controlled entry and planned infrastructure in every township we recommend.</p>
-        </figure>
+      <section aria-label="Life in our gated townships" className="bg-white pb-12 md:pb-16">
+        <div className="container grid gap-4 md:grid-cols-[1fr_1fr_0.8fr]">
+          {[
+            ['gated_society_entrance_clean.png', 'Secure gated entrance of a residential society in Lucknow', 'Gated Townships'],
+            ['family_playing_society_garden.png', 'Family enjoying the central garden of a gated community in Lucknow', 'Community Life'],
+          ].map(([file, alt, cap]) => (
+            <figure key={file} className="group relative overflow-hidden rounded-2xl">
+              <Img file={file} alt={alt} width={900} height={700} className="aspect-[4/3] h-full w-full object-cover transition duration-500 group-hover:scale-105 md:aspect-[4/5]" />
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-5 font-serif text-2xl text-white">{cap}</figcaption>
+            </figure>
+          ))}
+          <figure className="flex flex-col justify-end rounded-2xl bg-brand p-7 text-white/80">
+            <figcaption className="font-serif text-2xl text-gold">Safe &amp; Secure</figcaption>
+            <p className="mt-2 text-[14px]">Boundary walls, controlled entry and planned infrastructure in every township we recommend.</p>
+          </figure>
+        </div>
       </section>
 
-      <Section id="legacy" eyebrow="Our Legacy" title="Building the foundation for" accent="better living" className="section-tint">
-        <dl className="stats">
+      <Section id="legacy" eyebrow="Our Legacy" title="Building the foundation for" accent="better living" tone="tint">
+        <dl className="grid gap-4 sm:grid-cols-3">
           {stats.map((s) => (
-            <div key={s.label}>
-              <dt>{s.label}</dt>
-              <dd>{s.value}</dd>
+            <div key={s.label} className="flex flex-col-reverse rounded-2xl bg-white p-6 shadow-card">
+              <dt className="mt-1 text-[12px] font-bold uppercase tracking-[0.14em] text-ink-muted">{s.label}</dt>
+              <dd className="font-serif text-5xl font-semibold leading-none text-brand">{s.value}</dd>
             </div>
           ))}
         </dl>
       </Section>
 
-      <Section id="services" eyebrow="What we offer" title="Curated" accent="living" className="section-sand">
-        <div className="split">
-          <ol className="numbered">
+      <Section id="services" eyebrow="What we offer" title="Curated" accent="living" tone="sand">
+        <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr] md:gap-12">
+          <ol className="grid gap-3">
             {services.map((s, i) => (
-              <li key={s.title}>
-                <span className="num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <li key={s.title} className="flex gap-4 rounded-xl bg-white/70 p-4 transition hover:bg-white hover:shadow-card">
+                <span className="font-serif text-3xl font-semibold leading-none text-gold-dark" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 <div>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
+                  <h3 className="text-xl">{s.title}</h3>
+                  <p className="mt-1 text-[14px]">{s.text}</p>
                 </div>
               </li>
             ))}
           </ol>
-          <Img file="lucknow_ayodhya_plots_dusk.png" alt="Residential plots near Ayodhya Road, Lucknow at dusk" width={900} height={1100} className="split-img" />
+          <Img file="lucknow_ayodhya_plots_dusk.png" alt="Residential plots near Ayodhya Road, Lucknow at dusk" width={900} height={1000} className="aspect-[4/3] w-full rounded-2xl object-cover shadow-lift md:aspect-[4/4.4]" />
         </div>
       </Section>
 
       <Section id="featured" eyebrow="Featured Projects" title="Find your" accent="place">
-        <div className="grid-4 project-grid">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {featuredProjects.map((p) => <ProjectCard key={p.slug} project={p} />)}
         </div>
-        <p className="center"><Link to="/projects" className="text-link">View all projects in Lucknow <ArrowIcon /></Link></p>
+        <p className="mt-8 text-center"><Link to="/projects" className="text-link">View all projects in Lucknow <ArrowIcon width={16} height={16} /></Link></p>
       </Section>
 
-      <Section id="advantage" eyebrow="The Homexa Advantage" title="A better way to" accent="find your place" dark>
-        <ol className="grid-4 numbered numbered-cards">
+      <Section id="advantage" eyebrow="The Homexa Advantage" title="A better way to" accent="find your place" tone="brand">
+        <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {advantages.map((a, i) => (
-            <li key={a.title}>
-              <span className="num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-              <h3>{a.title}</h3>
-              <p>{a.text}</p>
+            <li key={a.title} className="rounded-2xl border border-white/10 bg-white/[0.06] p-6 transition hover:bg-white/10">
+              <span className="font-serif text-3xl font-semibold text-gold" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+              <h3 className="mt-2 text-xl">{a.title}</h3>
+              <p className="mt-1.5 text-[14px] text-white/70">{a.text}</p>
             </li>
           ))}
         </ol>
       </Section>
 
-      <Section id="insights" eyebrow="Market Intelligence" title="The" accent="insight" className="section-white">
-        <div className="grid-2">
+      <Section id="insights" eyebrow="Market Intelligence" title="The" accent="insight" tone="white">
+        <div className="grid gap-6 md:grid-cols-2">
           {insights.map((a) => <InsightCard key={a.slug} article={a} />)}
         </div>
-        <p className="center"><Link to="/insights" className="text-link">Read all market insights <ArrowIcon /></Link></p>
+        <p className="mt-8 text-center"><Link to="/insights" className="text-link">Read all market insights <ArrowIcon width={16} height={16} /></Link></p>
       </Section>
 
-      <Section id="testimonial" eyebrow="Client Stories" title="The Homexa" accent="experience" className="section-tint">
-        <figure className="testimonial">
-          <Img file="testimonial_rajiv_sharma.png" alt="Rajiv Sharma, NRI investor and Homexa Realty client" width={160} height={160} />
-          <blockquote>
-            <p>
-              “Homexa Realty redefined our expectations completely. Their portfolio was carefully chosen and the whole process, from site visit to registry, was transparent and stress-free.”
-            </p>
+      <Section id="testimonial" eyebrow="Client Stories" title="The Homexa" accent="experience" tone="tint" center>
+        <figure className="card mx-auto max-w-3xl p-8 text-center md:p-10">
+          <Img file="testimonial_rajiv_sharma.png" alt="Rajiv Sharma, NRI investor and Homexa Realty client" width={160} height={160} className="mx-auto h-20 w-20 rounded-full border-[3px] border-gold object-cover" />
+          <blockquote className="mt-5 font-serif text-xl italic leading-snug text-ink md:text-2xl">
+            <p>“Homexa Realty redefined our expectations completely. Their portfolio was carefully chosen and the whole process, from site visit to registry, was transparent and stress-free.”</p>
           </blockquote>
-          <figcaption><strong>Rajiv Sharma</strong>, NRI Investor</figcaption>
+          <figcaption className="mt-4 text-[14px]"><strong className="text-ink">Rajiv Sharma</strong> · NRI Investor</figcaption>
         </figure>
       </Section>
 

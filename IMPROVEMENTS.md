@@ -108,7 +108,7 @@ Clean, keyword-rich URLs (slugs) help ranking and look trustworthy when shared.
 
 - **No layout jumps:** every image has width and height, so the page doesn't shift while loading (better Core Web Vitals / CLS).
 - **Lazy-loaded images:** below-the-fold images load only when scrolled to. The hero image is marked high priority.
-- **Small bundle:** plain CSS with no UI framework, about 16 KB CSS and 75 KB JS gzipped.
+- **Small bundle:** Tailwind CSS keeps only the classes actually used, about 7 KB CSS and 82 KB JS gzipped.
 - **Fonts:** Google Fonts with `preconnect` and `display=swap`, so text shows immediately.
 
 ---
@@ -134,7 +134,7 @@ Clean, keyword-rich URLs (slugs) help ranking and look trustworthy when shared.
   - `src/data/projects.js`: projects (adding one creates its page and sitemap entry)
   - `src/data/insights.js`, `careers.js`, `policies.js`
 - **Reusable components:** `Seo`, `Section`, `PageHero`, `ProjectCard`, `InsightCard`, `CtaBanner`, `Breadcrumbs`, `Img`.
-- **Design tokens:** colours and fonts live in one place (`:root` in `src/styles/global.css`).
+- **Tailwind CSS:** colours, fonts and shadows are design tokens in `tailwind.config.js`; a few shared pieces (buttons, cards, headings) are in `src/styles/global.css`.
 - **Auto-deploy:** every push to `main` rebuilds and publishes to GitHub Pages.
 
 ---
@@ -162,3 +162,12 @@ These are copied from the live site but look wrong, so they're marked `TODO` in 
 | Internal pages look similar | Each section has its own banner style: Projects split with a framed photo, Story centred over a photo, Insights editorial with a wide image, Career brand colour with an arched photo, Contact photo overlay, and policies a light sand band. |
 | Footer too dark | Light sand footer with a teal top border and a separate bottom bar. |
 | Ideas from other real estate sites | A property search bar under the banner (type and budget filter the Projects page), a trust strip, and floating WhatsApp and call buttons. |
+
+## 9. Tighter, more premium layout with Tailwind CSS (15 Oct 2026)
+
+| Feedback | What changed |
+|---|---|
+| Too much gap between sections | Section padding cut to 48px on mobile and 64px on desktop, and heading-to-content gaps reduced. |
+| Line height too large | Body text line height is now 1.55 and headings 1.1, with slightly smaller heading sizes. |
+| Make it premium and professional | Consistent white cards with soft shadows, gold accents, numbered items and stat cards, a styled enquiry form and job cards. |
+| Use Tailwind CSS | All styling moved to Tailwind 3. Pre-rendering, SEO tags and structured data are unchanged. |

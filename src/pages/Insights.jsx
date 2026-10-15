@@ -32,11 +32,11 @@ export default function Insights() {
         <Breadcrumbs items={crumbs} />
       </PageHero>
 
-      <Section id="latest" eyebrow="Latest Articles" title="The" accent="insight" className="section-tint">
+      <Section id="latest" eyebrow="Latest Articles" title="The" accent="insight" tone="tint">
         {lead.stat && (
-          <p className="stat-callout"><strong>{lead.stat.value}</strong> {lead.stat.label}</p>
+          <p className="mb-6 flex items-center gap-4 rounded-2xl border-l-4 border-gold bg-white p-5 text-[14px] shadow-card"><strong className="font-serif text-4xl font-semibold leading-none text-brand">{lead.stat.value}</strong> {lead.stat.label}</p>
         )}
-        <div className="grid-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {insights.map((a) => <InsightCard key={a.slug} article={a} />)}
         </div>
       </Section>
